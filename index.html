@@ -4,210 +4,342 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Montmartre — Brasserie op de Zeedijk, Blankenberge</title>
-<meta name="description" content="Brasserie Montmartre op de Zeedijk in Blankenberge: verwarmd terras met zicht op zee, kinderspeeltuin, mosselen, vol-au-vent, garnaalkroketten en steak-friet. Zeedijk 157, 050 41 38 92.">
+<meta name="description" content="Brasserie Montmartre op de Zeedijk in Blankenberge, sinds 2005. Mosselen, vol-au-vent, garnaalkroketten, kreeft. Verwarmd terras met zicht op zee. Zeedijk 157, 050 41 38 92.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--zee:#1b2a33;--schuim:#f3f5f4;--koper:#c8893b;--koper-d:#a86f2a;--zand:#d8cdb8;--inkt:#15191c;--grijs:#5c6a72;--lijn:#d9dedc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:hidden;max-width:100%}
-body{margin:0;background:var(--schuim);color:var(--inkt);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;margin:0;line-height:1.05;letter-spacing:-.01em}
+:root{--mist:#E9EEF1;--kaart:#F6F8F9;--leisteen:#1E2328;--oker:#C9822A;--oker-d:#A96A1D;--oker-licht:#EBD3AF;--grijs:#5B666E;--lijn:#D3DADE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden;max-width:100%}
+body{margin:0;background:var(--mist);color:var(--leisteen);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
-nav.nav{position:absolute;top:0;left:0;right:0;z-index:5;color:#fff}
-nav.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.nav .merk{font-family:Gloock,serif;font-size:24px;text-decoration:none}
-.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px}
-.nav ul a{text-decoration:none;opacity:.9}.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-@media(max-width:720px){.nav ul{display:none}}
-.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--zee)}
-.hero .achtergrond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,51,.25) 0%,rgba(27,42,51,0) 35%,rgba(27,42,51,.78) 100%)}
-.hero .wrap{position:relative;z-index:2;padding:0 0 56px}
-.hero h1{font-size:clamp(50px,10.5vw,136px);line-height:.9;margin-left:-.04em;animation:rise .9s cubic-bezier(.2,.7,.2,1) both .15s}
-.hero p.sub{font-size:clamp(19px,2.2vw,26px);margin:18px 0 0;max-width:34ch;animation:rise .9s cubic-bezier(.2,.7,.2,1) both .35s}
-.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 16px 10px 12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:15px;animation:rise .9s both .5s}
-.status i{width:10px;height:10px;border-radius:50%;background:#7bd389;box-shadow:0 0 0 4px rgba(123,211,137,.25)}.status.dicht i{background:#e07a5f;box-shadow:0 0 0 4px rgba(224,122,95,.25)}
-.knoppen{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;animation:rise .9s both .6s}
-.knop{display:inline-block;padding:15px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;background:var(--koper);color:#fff;border:1px solid var(--koper)}
-.knop:hover{background:var(--koper-d);border-color:var(--koper-d)}
-.knop.licht{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}.knop.licht:hover{background:rgba(255,255,255,.12)}
-@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
-@media(prefers-reduced-motion:reduce){.hero h1,.hero p.sub,.status,.knoppen{animation:none}}
-section{padding:96px 0}
-.kop{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
-.kop h2{font-size:clamp(38px,5vw,60px)}.kop p{margin:0;color:var(--grijs);font-size:18px;max-width:46ch}
-@media(max-width:820px){.kop{grid-template-columns:1fr;gap:14px}}
-.kaart{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
-@media(max-width:900px){.kaart{grid-template-columns:1fr 1fr}}@media(max-width:560px){.kaart{grid-template-columns:1fr}}
-.gerecht img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;background:var(--zand)}
-.gerecht h3{font-size:26px;margin:16px 0 6px}.gerecht p{margin:0;color:var(--grijs);font-size:16px}
-.noot{margin:40px 0 0;padding-top:22px;border-top:1px solid var(--lijn);color:var(--grijs);font-size:16px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.terras{background:var(--zee);color:#fff}
-.terras .duo{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-@media(max-width:820px){.terras .duo{grid-template-columns:1fr}}
-.terras img{width:100%;border-radius:6px;display:block}
-.terras h2{font-size:clamp(38px,5vw,60px);margin-bottom:22px}
-.feiten{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
-.feiten li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;font-size:17px}
-.feiten li strong{display:block;font-weight:600}.feiten li span{color:rgba(255,255,255,.72)}
-.feiten svg{width:26px;height:26px;stroke:var(--koper);fill:none;stroke-width:1.6;margin-top:2px}
-.fotos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.fotos img{aspect-ratio:4/3;object-fit:cover}
-.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.score b{font-family:Gloock,serif;font-size:72px;font-weight:400;line-height:1}.score .sterren{color:var(--koper);font-size:26px;letter-spacing:2px}.score small{color:var(--grijs);font-size:16px}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-@media(max-width:820px){.quotes{grid-template-columns:1fr}}
-blockquote{margin:0;padding:28px;background:#fff;border:1px solid var(--lijn);border-radius:6px;font-size:17px}
-blockquote p{margin:0 0 16px}blockquote footer{color:var(--grijs);font-size:15px}
-.praktisch{background:#fff;border-top:1px solid var(--lijn)}
-.praktisch .duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-@media(max-width:820px){.praktisch .duo{grid-template-columns:1fr}}
-.praktisch h2{font-size:clamp(38px,5vw,60px);margin-bottom:26px}
-.uren{width:100%;border-collapse:collapse;font-size:17px}
-.uren td{padding:11px 0;border-bottom:1px solid var(--lijn)}.uren td:last-child{text-align:right}.uren tr.nu td{font-weight:600}.uren td.dicht{color:var(--grijs)}
-.adres{margin:26px 0 0;font-size:18px;line-height:1.7}.adres a{text-decoration:none;border-bottom:1px solid var(--zand)}
-.kaartbox{border-radius:6px;overflow:hidden;border:1px solid var(--lijn);min-height:380px;background:var(--zand)}
-.kaartbox iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
-footer.voet{padding:36px 0;color:var(--grijs);font-size:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.script{font-family:Parisienne,cursive;font-weight:400}
+.cond{font-family:"Barlow Condensed",sans-serif}
+
+/* kop */
+.kop{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .35s,box-shadow .35s}
+.kop.vast{background:rgba(233,238,241,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--lijn)}
+.kop .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{font-family:Parisienne,cursive;font-size:34px;text-decoration:none;line-height:1;color:var(--leisteen)}
+.menu{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+.menu a{text-decoration:none;opacity:.85}.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.rechts{display:flex;align-items:center;gap:14px}
+.talen{display:flex;gap:2px;font-size:13px;font-weight:600}
+.talen button{background:none;border:0;padding:6px 7px;border-radius:6px;cursor:pointer;color:var(--grijs);font:inherit}
+.talen button[aria-pressed="true"]{color:var(--leisteen);background:#fff}
+.knop{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;background:var(--oker);color:#fff;border:1px solid var(--oker);transition:background .2s,transform .2s}
+.knop:hover{background:var(--oker-d);border-color:var(--oker-d)}
+.knop.rand{background:transparent;color:var(--leisteen);border-color:var(--leisteen)}
+.knop.rand:hover{background:var(--leisteen);color:#fff}
+.knop.klein{padding:9px 16px;font-size:14px}
+@media(max-width:900px){.menu{display:none}}
+@media(max-width:560px){.kop .knop.klein{display:none}.logo{font-size:30px}}
+
+/* held */
+.held{position:relative;min-height:100vh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden}
+.held .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;position:relative;z-index:2}
+.achter{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-family:Parisienne,cursive;font-size:clamp(140px,24vw,380px);color:#fff;opacity:.9;white-space:nowrap;line-height:1;pointer-events:none;z-index:1;clip-path:inset(0 100% 0 0);animation:schrijf 2.2s cubic-bezier(.6,.1,.2,1) .2s forwards}
+@keyframes schrijf{to{clip-path:inset(0 0 0 0)}}
+.sinds{font-size:15px;color:var(--grijs);margin:0 0 14px}
+.held h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:clamp(46px,6.2vw,86px);line-height:.95;margin:0;letter-spacing:-.01em}
+.held p.sub{font-size:19px;max-width:30ch;margin:22px 0 0;color:#39424a}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 14px 8px 11px;border-radius:999px;background:#fff;font-size:15px}
+.status i{width:9px;height:9px;border-radius:50%;background:#3faa63;box-shadow:0 0 0 4px rgba(63,170,99,.18)}
+.status.dicht i{background:#d1603d;box-shadow:0 0 0 4px rgba(209,96,61,.18)}
+.knoppen{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.pot{position:relative;justify-self:center;width:min(560px,100%)}
+.pot img{width:100%;filter:drop-shadow(0 40px 40px rgba(30,35,40,.28));animation:landt 1.3s cubic-bezier(.2,.8,.2,1) .5s both;will-change:transform}
+@keyframes landt{from{opacity:0;transform:translateY(60px) rotate(-14deg) scale(.9)}to{opacity:1;transform:none}}
+.label{position:absolute;right:2%;bottom:6%;background:var(--leisteen);color:#fff;border-radius:14px;padding:12px 16px;font-size:14px;line-height:1.3;animation:landt 1s .9s both}
+.label b{display:block;font-family:"Barlow Condensed",sans-serif;font-style:italic;font-size:22px}
+@media(max-width:860px){.held{padding-top:100px;min-height:auto}.held .wrap{grid-template-columns:1fr}.pot{width:min(420px,92%);margin-top:10px}.achter{top:62%}}
+
+/* strook */
+.strook{background:var(--leisteen);color:#fff;overflow:hidden;padding:18px 0}
+.band{display:flex;gap:44px;width:max-content;animation:schuif 40s linear infinite;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-style:italic;font-size:30px}
+.band span{display:flex;align-items:center;gap:44px;white-space:nowrap}
+.band svg{width:22px;height:22px;fill:var(--oker)}
+@keyframes schuif{to{transform:translateX(-50%)}}
+
+/* kaart */
+section{padding:110px 0}
+.kaartsectie{background:var(--kaart)}
+.koptekst{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:34px}
+.koptekst h2,.h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:clamp(44px,6vw,76px);line-height:.95;margin:0}
+.koptekst p{margin:0;color:var(--grijs);max-width:44ch}
+@media(max-width:820px){.koptekst{grid-template-columns:1fr;gap:12px}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:80px;z-index:5;background:var(--kaart);padding:10px 0 14px}
+.tabs button{border:1px solid var(--lijn);background:#fff;border-radius:999px;padding:10px 18px;font:600 15px "Instrument Sans",sans-serif;cursor:pointer;color:var(--grijs);transition:all .2s}
+.tabs button[aria-selected="true"]{background:var(--leisteen);border-color:var(--leisteen);color:#fff}
+.groep{display:none}
+.groep.aan{display:block}
+.groep .grootwoord{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:clamp(70px,12vw,170px);line-height:.85;color:var(--oker-licht);margin:24px 0 10px}
+.gerechten{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.gerechten{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gerechten{grid-template-columns:1fr}}
+.gerecht{background:#fff;border-radius:22px;padding:22px 24px 26px;position:relative;overflow:hidden;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.groep.aan .gerecht{opacity:1;transform:none}
+.groep.aan .gerecht:nth-child(2){transition-delay:.08s}.groep.aan .gerecht:nth-child(3){transition-delay:.16s}
+.gerecht .beeld{height:230px;display:flex;align-items:center;justify-content:center;margin:-6px 0 8px}
+.gerecht .beeld img{max-height:100%;width:auto;filter:drop-shadow(0 18px 22px rgba(30,35,40,.22));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.gerecht:hover .beeld img{transform:rotate(-6deg) scale(1.06)}
+.gerecht h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:30px;line-height:1;margin:0 0 8px}
+.gerecht p{margin:0;color:var(--grijs);font-size:16px}
+.noot{margin:34px 0 0;color:var(--grijs);font-size:15px}
+
+/* terras */
+.terras{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;padding:0;overflow:hidden;background:var(--leisteen)}
+.terras video,.terras .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.terras::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,28,0) 30%,rgba(20,24,28,.82) 100%)}
+.terras .wrap{position:relative;z-index:2;padding:0 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.terras .h2{color:#fff}
+.feiten{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.feiten li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px}
+.feiten li strong{display:block}.feiten li span{color:rgba(255,255,255,.75)}
+.feiten svg{width:24px;height:24px;stroke:var(--oker);fill:none;stroke-width:1.7;margin-top:1px}
+@media(max-width:820px){.terras .wrap{grid-template-columns:1fr}}
+
+/* verhaal */
+.verhaal .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.twintig{position:relative;line-height:.8}
+.twintig b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:clamp(180px,26vw,330px);color:var(--leisteen);display:block}
+.twintig .script{position:absolute;right:6%;bottom:-6%;font-size:clamp(54px,7vw,92px);color:var(--oker)}
+.verhaal p{font-size:18px;color:#39424a;max-width:46ch}
+.fotoduo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.fotoduo img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.fotoduo img:last-child{margin-top:40px}
+@media(max-width:820px){.verhaal .wrap{grid-template-columns:1fr;gap:20px}}
+
+/* reviews */
+.reviews{background:var(--kaart)}
+.score{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.score b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic;font-size:96px;line-height:1}
+.sterren{color:var(--oker);font-size:26px;letter-spacing:3px}
+.score small{color:var(--grijs);font-size:16px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;background:#fff;border-radius:22px;padding:28px;font-size:17px}
+blockquote p{margin:0 0 14px}
+blockquote footer{color:var(--grijs);font-size:14px}
+
+/* praktisch */
+.praktisch .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+@media(max-width:820px){.praktisch .wrap{grid-template-columns:1fr}}
+.uren{width:100%;border-collapse:collapse;font-size:17px;margin-top:26px}
+.uren td{padding:11px 0;border-bottom:1px solid var(--lijn)}.uren td:last-child{text-align:right}
+.uren tr.nu td{font-weight:600}.uren td.dicht{color:var(--grijs)}
+.adres{margin:26px 0 0;font-size:18px;line-height:1.7}.adres a{text-decoration:none;border-bottom:1px solid var(--oker)}
+.kaartbox{border-radius:22px;overflow:hidden;min-height:420px;background:#dfe5e8}
+.kaartbox iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+footer.voet{padding:40px 0;border-top:1px solid var(--lijn)}
+footer.voet .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--grijs);font-size:14px}
+
+/* gsm-balk */
 .belbalk{display:none}
-@media(max-width:720px){.belbalk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:9}
-.belbalk .knop{text-align:center;padding:14px 10px;box-shadow:0 10px 30px rgba(21,25,28,.25)}.belbalk .knop.licht{background:#fff;color:var(--inkt);border-color:#fff}
-body{padding-bottom:84px}.hero{min-height:min(88vh,760px)}}
-/* beweging */
-.hero .achtergrond{will-change:transform}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+@media(max-width:720px){.belbalk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}
+.belbalk .knop{text-align:center;padding:14px 10px;box-shadow:0 10px 30px rgba(30,35,40,.25)}.belbalk .knop.rand{background:#fff}
+body{padding-bottom:84px}}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
-.gerecht{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.gerecht.in{opacity:1;transform:none}
-.gerecht .beeld{overflow:hidden;border-radius:6px}
-.gerecht .beeld img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1);transform:scale(1.08)}
-.gerecht.in .beeld img{transform:scale(1)}
-.gerecht:hover .beeld img{transform:scale(1.04)}
-.strook{overflow:hidden;padding:0 0 8px;background:var(--schuim)}
-.strook .band{display:flex;gap:14px;width:max-content;animation:schuif 70s linear infinite}
-.strook:hover .band{animation-play-state:paused}
-.strook img{width:300px;height:225px;object-fit:cover;border-radius:4px;display:block}
-@keyframes schuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.score b{display:inline-block;min-width:2.2ch}
-.score .sterren span{opacity:.25;transition:opacity .35s}.score .sterren span.aan{opacity:1}
-.uren tr.nu td{position:relative}.uren tr.nu td:first-child::before{content:"";position:absolute;left:-14px;top:50%;width:6px;height:6px;border-radius:50%;background:var(--koper);transform:translateY(-50%)}
-.plakkend{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(27,42,51,.92);backdrop-filter:blur(10px);color:#fff;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.plakkend.aan{transform:none}
-.plakkend .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0;font-size:15px}
-.plakkend .merk{font-family:Gloock,serif;font-size:22px;text-decoration:none}
-.plakkend .knop{padding:9px 16px;font-size:14px}
-@media(max-width:720px){.plakkend{display:none}}
-@media(prefers-reduced-motion:reduce){.reveal,.gerecht{opacity:1;transform:none;transition:none}.gerecht .beeld img{transform:none;transition:none}.strook .band{animation:none}.plakkend{transition:none}}
+:focus-visible{outline:2px solid var(--oker);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.achter{clip-path:none}.reveal,.gerecht{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="plakkend" id="plakkend"><div class="wrap"><a class="merk" href="#top">Montmartre</a><span id="plakstatus"></span><a class="knop" href="tel:+3250413892">Bel 050 41 38 92</a></div></div>
-<header class="hero" id="top">
-  <video class="achtergrond" src="img/terras_loop.mp4" poster="img/terras_poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Het terras van Montmartre op de Zeedijk bij valavond, met zicht op zee"></video>
-  <nav class="nav"><div class="wrap"><a class="merk" href="#top">Montmartre</a>
-    <ul><li><a href="#kaart">De kaart</a></li><li><a href="#terras">Terras</a></li><li><a href="#praktisch">Openingsuren</a></li><li><a href="tel:+3250413892">050 41 38 92</a></li></ul></div></nav>
+
+<header class="kop" id="kop">
   <div class="wrap">
-    <h1>Montmartre</h1>
-    <p class="sub">Brasserie op de Zeedijk van Blankenberge. Verwarmd terras met zicht op zee, een speeltuin voor de kinderen en een kaart van mosselen tot kreeft.</p>
-    <div class="status" id="status"><i></i><span>Openingsuren laden…</span></div>
-    <div class="knoppen"><a class="knop" href="tel:+3250413892">Bel om te reserveren</a><a class="knop licht" href="https://www.google.com/maps/search/?api=1&amp;query=Montmartre&amp;query_place_id=ChIJ17ZUZ2OqxEcRtraHGsbg_ds">Route naar Zeedijk 157</a></div>
+    <a class="logo" href="#top">Montmartre</a>
+    <ul class="menu">
+      <li><a href="#kaart" data-t="nav_kaart">De kaart</a></li>
+      <li><a href="#terras" data-t="nav_terras">Terras</a></li>
+      <li><a href="#verhaal" data-t="nav_verhaal">Ons verhaal</a></li>
+      <li><a href="#praktisch" data-t="nav_uren">Openingsuren</a></li>
+    </ul>
+    <div class="rechts">
+      <div class="talen" role="group" aria-label="Taal">
+        <button data-lang="nl">NL</button><button data-lang="fr">FR</button><button data-lang="en">EN</button><button data-lang="de">DE</button>
+      </div>
+      <a class="knop klein" href="tel:+3250413892" data-t="bel_kort">Reserveren</a>
+    </div>
   </div>
 </header>
 
-<section id="kaart">
+<main id="top">
+<section class="held">
+  <div class="achter" aria-hidden="true">Montmartre</div>
   <div class="wrap">
-    <div class="kop reveal"><h2>De kaart</h2><p>Klassiekers van de kust, elke dag vers. Grote porties, eerlijke prijzen, en bij alles frietjes van het huis.</p></div>
-    <div class="kaart">
-      <article class="gerecht"><div class="beeld"><img src="img/mosselen.jpg" alt="Pot mosselen natuur"></div><h3>Mosselen</h3><p>Natuur, met look of in witte wijn. Met frietjes, zoals het hoort.</p></article>
-      <article class="gerecht"><div class="beeld"><img src="img/volauvent_echt.jpg" alt="Vol-au-vent in romige saus"></div><h3>Vol-au-vent</h3><p>Huisbereid, romig en royaal. De favoriet van onze vaste gasten.</p></article>
-      <article class="gerecht"><div class="beeld"><img src="img/kroketten.jpg" alt="Garnaalkroketten met salade en citroen"></div><h3>Garnaalkroketten</h3><p>Krokant gebakken, met gefrituurde peterselie en citroen.</p></article>
-      <article class="gerecht"><div class="beeld"><img src="img/steak.jpg" alt="Steak met frietjes en béarnaise"></div><h3>Steak-friet</h3><p>Gegrild zoals u het wil, met béarnaise of pepersaus en verse salade.</p></article>
-      <article class="gerecht"><div class="beeld"><img src="img/kreeft.jpg" alt="Gegrilde kreeft met krieltjes"></div><h3>Gegrilde kreeft</h3><p>Met groenteboter en krieltjes. Voor de dagen dat het feest mag zijn.</p></article>
-      <article class="gerecht"><div class="beeld"><img src="img/cremebrulee.jpg" alt="Crème brûlée"></div><h3>Crème brûlée</h3><p>Om te eindigen: gekaramelliseerd, nog lauw.</p></article>
+    <div>
+      <p class="sinds" data-t="sinds">Brasserie op de Zeedijk van Blankenberge, sinds 2005</p>
+      <h1 data-t="held_titel">Mosselen met zicht op zee.</h1>
+      <p class="sub" data-t="held_sub">Verwarmd terras, een speelhoek voor de kinderen en een kaart van vol-au-vent tot gegrilde kreeft.</p>
+      <div class="status" id="status"><i></i><span>…</span></div>
+      <div class="knoppen">
+        <a class="knop" href="tel:+3250413892" data-t="bel">Bel om te reserveren</a>
+        <a class="knop rand" href="#kaart" data-t="naar_kaart">Bekijk de kaart</a>
+      </div>
     </div>
-    <p class="noot reveal"><span>Ook pannenkoeken, salades, stoofvlees, visschotels en een kindermenu.</span><span>Vraag naar de suggesties van de dag.</span></p>
+    <div class="pot">
+      <img id="pot" src="img/mosselen.webp" alt="Pot mosselen van Montmartre" width="900" height="760">
+      <div class="label"><b data-t="label_titel">Mosselen</b><span data-t="label_tekst">Natuur, look of witte wijn</span></div>
+    </div>
   </div>
 </section>
 
-<div class="strook" aria-hidden="true"><div class="band"><img src="img/strip1.jpg" alt=""><img src="img/strip2.jpg" alt=""><img src="img/strip3.jpg" alt=""><img src="img/strip4.jpg" alt=""><img src="img/strip5.jpg" alt=""><img src="img/strip6.jpg" alt=""><img src="img/strip7.jpg" alt=""><img src="img/strip8.jpg" alt=""><img src="img/strip9.jpg" alt=""><img src="img/strip10.jpg" alt=""><img src="img/strip1.jpg" alt=""><img src="img/strip2.jpg" alt=""><img src="img/strip3.jpg" alt=""><img src="img/strip4.jpg" alt=""><img src="img/strip5.jpg" alt=""><img src="img/strip6.jpg" alt=""><img src="img/strip7.jpg" alt=""><img src="img/strip8.jpg" alt=""><img src="img/strip9.jpg" alt=""><img src="img/strip10.jpg" alt=""></div></div>
+<div class="strook" aria-hidden="true">
+  <div class="band" id="band"></div>
+</div>
+
+<section class="kaartsectie" id="kaart">
+  <div class="wrap">
+    <div class="koptekst reveal">
+      <h2 data-t="kaart_titel">De kaart</h2>
+      <p data-t="kaart_intro">Klassiekers van de kust, elke dag vers. Grote porties, eerlijke prijzen, en bij alles frietjes van het huis.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-groep="zee" data-t="tab_zee">Van de zee</button>
+      <button role="tab" aria-selected="false" data-groep="brasserie" data-t="tab_brasserie">Brasserie</button>
+      <button role="tab" aria-selected="false" data-groep="dessert" data-t="tab_dessert">Dessert</button>
+    </div>
+
+    <div class="groep aan" id="g-zee" role="tabpanel">
+      <div class="grootwoord" data-t="tab_zee">Van de zee</div>
+      <div class="gerechten">
+        <article class="gerecht"><div class="beeld"><img src="img/mosselen2.webp" alt="" loading="lazy"></div><h3 data-t="g_mos">Mosselen</h3><p data-t="g_mos_t">Natuur, met look of in witte wijn. Met frietjes, zoals het hoort.</p></article>
+        <article class="gerecht"><div class="beeld"><img src="img/kroketten.webp" alt="" loading="lazy"></div><h3 data-t="g_kro">Garnaalkroketten</h3><p data-t="g_kro_t">Krokant gebakken, met verse salade en citroen.</p></article>
+        <article class="gerecht"><div class="beeld"><img src="img/kreeft.webp" alt="" loading="lazy"></div><h3 data-t="g_kre">Gegrilde kreeft</h3><p data-t="g_kre_t">Met groenteboter en krieltjes. Voor de dagen dat het feest mag zijn.</p></article>
+      </div>
+    </div>
+    <div class="groep" id="g-brasserie" role="tabpanel">
+      <div class="grootwoord" data-t="tab_brasserie">Brasserie</div>
+      <div class="gerechten">
+        <article class="gerecht"><div class="beeld"><img src="img/volauvent.webp" alt="" loading="lazy"></div><h3>Vol-au-vent</h3><p data-t="g_vol_t">Huisbereid, met kip, champignons en balletjes in romige saus.</p></article>
+        <article class="gerecht"><div class="beeld"><img src="img/steak2.webp" alt="" loading="lazy"></div><h3 data-t="g_ste">Steak-friet</h3><p data-t="g_ste_t">Gegrild zoals u het wil, met béarnaise of pepersaus.</p></article>
+        <article class="gerecht"><div class="beeld"><img src="img/steak.webp" alt="" loading="lazy"></div><h3 data-t="g_men">Het volledige bord</h3><p data-t="g_men_t">Steak, frietjes, verse salade en saus: zo komt het op tafel.</p></article>
+      </div>
+    </div>
+    <div class="groep" id="g-dessert" role="tabpanel">
+      <div class="grootwoord" data-t="tab_dessert">Dessert</div>
+      <div class="gerechten">
+        <article class="gerecht"><div class="beeld"><img src="img/cremebrulee.webp" alt="" loading="lazy"></div><h3>Crème brûlée</h3><p data-t="g_cre_t">Gekaramelliseerd en nog lauw. Het beste einde.</p></article>
+      </div>
+    </div>
+    <p class="noot" data-t="noot">Ook pannenkoeken, salades, stoofvlees, visschotels en een kindermenu. Vraag naar de suggesties van de dag.</p>
+  </div>
+</section>
 
 <section class="terras" id="terras">
-  <div class="wrap duo">
-    <div class="reveal"><img src="img/gevel_avond.jpg" alt="Montmartre op de Zeedijk bij avond, met het verlichte terras">
-      <div class="fotos"><img src="img/interieur.jpg" alt="Het vernieuwde interieur met de bar"><img src="img/gevel.jpg" alt="De gevel van Montmartre op de Zeedijk"></div></div>
-    <div>
-      <h2 class="reveal">Zicht op zee, ook in de winter</h2>
-      <p>Op het terras zit u recht tegenover het strand. Bij frisse dagen staan de verwarmers aan; binnen wacht het vernieuwde interieur met de bar.</p>
-      <ul class="feiten">
-        <li><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/></svg><div><strong>Verwarmd terras</strong><span>Het hele jaar buiten zitten, met zicht op zee.</span></div></li>
-        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21v-4a7 7 0 0 1 14 0v4"/></svg><div><strong>Binnenspeeltuin voor de kinderen</strong><span>Kleurplaat en lolly inbegrepen.</span></div></li>
-        <li><svg viewBox="0 0 24 24"><circle cx="9" cy="17" r="3"/><path d="M9 14V7h5l3 5h3M6 7h3"/></svg><div><strong>Rolstoeltoegankelijk</strong><span>Ingang, zitplaatsen en toilet.</span></div></li>
-      </ul>
+  <img class="poster" src="img/terras_poster.jpg" alt="">
+  <video src="img/terras_loop.mp4" poster="img/terras_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  <div class="wrap">
+    <div class="reveal">
+      <h2 class="h2" data-t="terras_titel">Zicht op zee, ook in de winter</h2>
+      <p data-t="terras_tekst" style="max-width:44ch;font-size:18px;color:rgba(255,255,255,.85)">Op het terras zit u recht tegenover het strand. Bij frisse dagen staan de verwarmers aan.</p>
+    </div>
+    <ul class="feiten reveal">
+      <li><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/></svg><div><strong data-t="f1">Verwarmd terras</strong><span data-t="f1_t">Het hele jaar buiten zitten, met zicht op zee.</span></div></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21v-4a7 7 0 0 1 14 0v4"/></svg><div><strong data-t="f2">Binnenspeeltuin</strong><span data-t="f2_t">Kleurplaat en lolly voor de kinderen.</span></div></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="9" cy="17" r="3"/><path d="M9 14V7h5l3 5h3M6 7h3"/></svg><div><strong data-t="f3">Rolstoeltoegankelijk</strong><span data-t="f3_t">Ingang, zitplaatsen en toilet.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="verhaal" id="verhaal">
+  <div class="wrap">
+    <div class="twintig reveal"><b id="jaren">20</b><span class="script" data-t="jaar">jaar</span></div>
+    <div class="reveal">
+      <h2 class="h2" data-t="verhaal_titel">Sinds 2005 op de Zeedijk</h2>
+      <p data-t="verhaal_tekst">Twintig zomers en twintig winters aan zee. Gasten die als kind kwamen voor de pannenkoeken, komen nu met hun eigen kinderen voor de mosselen. Het interieur is vernieuwd, de bediening is gebleven.</p>
+      <div class="fotoduo"><img src="img/interieur.jpg" alt="" loading="lazy"><img src="img/gevel_avond.jpg" alt="" loading="lazy"></div>
     </div>
   </div>
 </section>
 
-<section id="reviews">
+<section class="reviews">
   <div class="wrap">
-    <div class="score reveal"><b id="cijfer">0,0</b><span class="sterren" id="sterren"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></span><small>op Google, bij 1.898 beoordelingen</small></div>
+    <div class="score reveal"><b id="cijfer">4,2</b><span class="sterren">★★★★☆</span><small data-t="reviews_onder">op Google, bij 1.898 beoordelingen</small></div>
     <div class="quotes reveal">
-      <blockquote><p>“De kaart is heel gevarieerd met voor elk wat wils. Het onthaal was heel vriendelijk en spontaan. Vol-au-vent met frietjes, een Poes erbij: snel bediend en de porties zijn groot. Zeker een aanrader.”</p><footer>Arnout, via Google</footer></blockquote>
-      <blockquote><p>“Een mooie binnenspeeltuin voor jonge kindjes, gratis lolly bij het drinken, de wachttijd is super snel. Eten is lekker en een zeer mooie prijs voor wat u krijgt. Wij komen volgende keer nog eens terug.”</p><footer>Tom, via Google</footer></blockquote>
-      <blockquote><p>“Aanrader: vriendelijke bediening en eerlijke prijzen. Beste plek in Blankenberge om te eten.”</p><footer>Luc, via Google</footer></blockquote>
+      <blockquote><p>“De kaart is heel gevarieerd met voor elk wat wils. Snel bediend en de porties zijn groot. Zeker een aanrader.”</p><footer>Arnout, Google</footer></blockquote>
+      <blockquote><p>“Een mooie binnenspeeltuin voor jonge kindjes, gratis lolly bij het drinken. Eten is lekker en een zeer mooie prijs.”</p><footer>Tom, Google</footer></blockquote>
+      <blockquote><p>“Vriendelijke bediening en eerlijke prijzen. Beste plek in Blankenberge om te eten.”</p><footer>Luc, Google</footer></blockquote>
     </div>
   </div>
 </section>
 
 <section class="praktisch" id="praktisch">
-  <div class="wrap duo">
-    <div>
-      <h2 class="reveal">Openingsuren</h2>
+  <div class="wrap">
+    <div class="reveal">
+      <h2 class="h2" data-t="uren_titel">Openingsuren</h2>
       <table class="uren" id="uren"></table>
-      <p class="adres">Zeedijk 157, 8370 Blankenberge<br><a href="tel:+3250413892">050 41 38 92</a><br>Geen reservatie nodig voor kleine groepen. Bel even voor 6 personen of meer.</p>
+      <p class="adres">Zeedijk 157, 8370 Blankenberge<br><a href="tel:+3250413892">050 41 38 92</a><br><span data-t="groep">Bel even voor groepen van 6 personen of meer.</span></p>
     </div>
-    <div class="kaartbox"><iframe title="Montmartre op de kaart" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ17ZUZ2OqxEcRtraHGsbg_ds&amp;output=embed&amp;hl=nl"></iframe></div>
+    <div class="kaartbox"><iframe title="Montmartre op de kaart" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ17ZUZ2OqxEcRtraHGsbg_ds&amp;output=embed"></iframe></div>
   </div>
-  <div class="wrap"><footer class="voet"><span>© Brasserie Montmartre, Blankenberge</span><span>Zeedijk 157 · 050 41 38 92</span></footer></div>
 </section>
+</main>
 
-<div class="belbalk"><a class="knop" href="tel:+3250413892">Bel 050 41 38 92</a><a class="knop licht" href="https://www.google.com/maps/search/?api=1&amp;query=Montmartre&amp;query_place_id=ChIJ17ZUZ2OqxEcRtraHGsbg_ds">Route</a></div>
+<footer class="voet"><div class="wrap"><span>© Brasserie Montmartre, Blankenberge</span><span>Zeedijk 157 · 050 41 38 92</span></div></footer>
+
+<div class="belbalk"><a class="knop" href="tel:+3250413892" data-t="bel_kort">Reserveren</a><a class="knop rand" href="https://www.google.com/maps/search/?api=1&amp;query=Montmartre&amp;query_place_id=ChIJ17ZUZ2OqxEcRtraHGsbg_ds" data-t="route">Route</a></div>
 
 <script>
-// openingsuren per dag (0 = zondag), van de Google-vermelding; de uitbater past dit aan
-var uren = {1:["10:30","22:00"],2:["10:30","22:00"],3:["10:30","22:00"],4:["10:30","22:00"],5:["10:30","22:00"],6:null,0:null};
-var dagen = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
-var nu = new Date(), d = nu.getDay(), t = nu.getHours()*60 + nu.getMinutes();
-function min(s){ var p = s.split(":"); return Number(p[0])*60 + Number(p[1]); }
-var html = "";
-[1,2,3,4,5,6,0].forEach(function(i){
-  var u = uren[i];
-  html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dagen[i].charAt(0).toUpperCase() + dagen[i].slice(1) + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : "Gesloten") + "</td></tr>";
-});
-document.getElementById("uren").innerHTML = html;
-var st = document.getElementById("status"), u = uren[d], sp = st.querySelector("span");
-if (u && t >= min(u[0]) && t < min(u[1])) { sp.textContent = "Nu open · vandaag tot " + u[1]; }
-else {
-  st.classList.add("dicht");
-  var v = (d+1)%7, n = 1; while (!uren[v] && n < 7) { v = (v+1)%7; n++; }
-  sp.textContent = (u && t < min(u[0])) ? "Vandaag open vanaf " + u[0] : "Nu gesloten · " + (n===1 ? "morgen" : dagen[v]) + " open vanaf " + uren[v][0];
+var T = {
+ nl:{nav_kaart:"De kaart",nav_terras:"Terras",nav_verhaal:"Ons verhaal",nav_uren:"Openingsuren",bel_kort:"Reserveren",sinds:"Brasserie op de Zeedijk van Blankenberge, sinds 2005",held_titel:"Mosselen met zicht op zee.",held_sub:"Verwarmd terras, een speelhoek voor de kinderen en een kaart van vol-au-vent tot gegrilde kreeft.",bel:"Bel om te reserveren",naar_kaart:"Bekijk de kaart",label_titel:"Mosselen",label_tekst:"Natuur, look of witte wijn",kaart_titel:"De kaart",kaart_intro:"Klassiekers van de kust, elke dag vers. Grote porties, eerlijke prijzen, en bij alles frietjes van het huis.",tab_zee:"Van de zee",tab_brasserie:"Brasserie",tab_dessert:"Dessert",g_mos:"Mosselen",g_mos_t:"Natuur, met look of in witte wijn. Met frietjes, zoals het hoort.",g_kro:"Garnaalkroketten",g_kro_t:"Krokant gebakken, met verse salade en citroen.",g_kre:"Gegrilde kreeft",g_kre_t:"Met groenteboter en krieltjes. Voor de dagen dat het feest mag zijn.",g_vol_t:"Huisbereid, met kip, champignons en balletjes in romige saus.",g_ste:"Steak-friet",g_ste_t:"Gegrild zoals u het wil, met béarnaise of pepersaus.",g_men:"Het volledige bord",g_men_t:"Steak, frietjes, verse salade en saus: zo komt het op tafel.",g_cre_t:"Gekaramelliseerd en nog lauw. Het beste einde.",noot:"Ook pannenkoeken, salades, stoofvlees, visschotels en een kindermenu. Vraag naar de suggesties van de dag.",terras_titel:"Zicht op zee, ook in de winter",terras_tekst:"Op het terras zit u recht tegenover het strand. Bij frisse dagen staan de verwarmers aan.",f1:"Verwarmd terras",f1_t:"Het hele jaar buiten zitten, met zicht op zee.",f2:"Binnenspeeltuin",f2_t:"Kleurplaat en lolly voor de kinderen.",f3:"Rolstoeltoegankelijk",f3_t:"Ingang, zitplaatsen en toilet.",jaar:"jaar",verhaal_titel:"Sinds 2005 op de Zeedijk",verhaal_tekst:"Twintig zomers en twintig winters aan zee. Gasten die als kind kwamen voor de pannenkoeken, komen nu met hun eigen kinderen voor de mosselen. Het interieur is vernieuwd, de bediening is gebleven.",reviews_onder:"op Google, bij 1.898 beoordelingen",uren_titel:"Openingsuren",groep:"Bel even voor groepen van 6 personen of meer.",route:"Route",dagen:["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],gesloten:"Gesloten",nu_open:"Nu open · vandaag tot ",open_vanaf:"Vandaag open vanaf ",nu_dicht:"Nu gesloten · ",morgen:"morgen",vanaf:" open vanaf "},
+ fr:{nav_kaart:"La carte",nav_terras:"Terrasse",nav_verhaal:"Notre histoire",nav_uren:"Horaires",bel_kort:"Réserver",sinds:"Brasserie sur la digue de Blankenberge, depuis 2005",held_titel:"Des moules face à la mer.",held_sub:"Terrasse chauffée, un coin de jeux pour les enfants et une carte du vol-au-vent au homard grillé.",bel:"Appeler pour réserver",naar_kaart:"Voir la carte",label_titel:"Moules",label_tekst:"Nature, à l’ail ou au vin blanc",kaart_titel:"La carte",kaart_intro:"Les classiques de la côte, frais chaque jour. Belles portions, prix honnêtes, et des frites maison avec tout.",tab_zee:"De la mer",tab_brasserie:"Brasserie",tab_dessert:"Dessert",g_mos:"Moules",g_mos_t:"Nature, à l’ail ou au vin blanc. Avec des frites, comme il se doit.",g_kro:"Croquettes de crevettes",g_kro_t:"Bien croustillantes, avec salade fraîche et citron.",g_kre:"Homard grillé",g_kre_t:"Au beurre de légumes et pommes grenaille. Pour les jours de fête.",g_vol_t:"Fait maison, poulet, champignons et boulettes en sauce crémeuse.",g_ste:"Steak-frites",g_ste_t:"Grillé à votre goût, sauce béarnaise ou au poivre.",g_men:"L’assiette complète",g_men_t:"Steak, frites, salade fraîche et sauce : voilà ce qui arrive à table.",g_cre_t:"Caramélisée et encore tiède. La meilleure fin.",noot:"Aussi des crêpes, salades, carbonnade, plats de poisson et un menu enfant. Demandez les suggestions du jour.",terras_titel:"Vue sur la mer, même en hiver",terras_tekst:"Sur la terrasse, vous êtes juste en face de la plage. Les jours frais, les chauffages sont allumés.",f1:"Terrasse chauffée",f1_t:"Dehors toute l’année, avec vue sur la mer.",f2:"Coin de jeux intérieur",f2_t:"Coloriage et sucette pour les enfants.",f3:"Accessible en fauteuil",f3_t:"Entrée, places et toilettes.",jaar:"ans",verhaal_titel:"Sur la digue depuis 2005",verhaal_tekst:"Vingt étés et vingt hivers face à la mer. Ceux qui venaient enfants pour les crêpes reviennent aujourd’hui avec leurs propres enfants pour les moules. L’intérieur a été rénové, le service est resté.",reviews_onder:"sur Google, 1 898 avis",uren_titel:"Horaires",groep:"Appelez pour les groupes de 6 personnes ou plus.",route:"Itinéraire",dagen:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],gesloten:"Fermé",nu_open:"Ouvert · aujourd’hui jusqu’à ",open_vanaf:"Ouvert aujourd’hui dès ",nu_dicht:"Fermé · ",morgen:"demain",vanaf:" ouvert dès "},
+ en:{nav_kaart:"Menu",nav_terras:"Terrace",nav_verhaal:"Our story",nav_uren:"Opening hours",bel_kort:"Book a table",sinds:"Brasserie on the seafront of Blankenberge, since 2005",held_titel:"Mussels with a sea view.",held_sub:"A heated terrace, a play corner for the kids and a menu from vol-au-vent to grilled lobster.",bel:"Call to book",naar_kaart:"See the menu",label_titel:"Mussels",label_tekst:"Plain, garlic or white wine",kaart_titel:"The menu",kaart_intro:"Coastal classics, fresh every day. Big portions, fair prices, and house fries with everything.",tab_zee:"From the sea",tab_brasserie:"Brasserie",tab_dessert:"Dessert",g_mos:"Mussels",g_mos_t:"Plain, with garlic or in white wine. With fries, the way it should be.",g_kro:"Shrimp croquettes",g_kro_t:"Fried crisp, with fresh salad and lemon.",g_kre:"Grilled lobster",g_kre_t:"With vegetable butter and baby potatoes. For the days worth celebrating.",g_vol_t:"Homemade, with chicken, mushrooms and meatballs in a creamy sauce.",g_ste:"Steak & fries",g_ste_t:"Grilled the way you like it, with béarnaise or pepper sauce.",g_men:"The full plate",g_men_t:"Steak, fries, fresh salad and sauce: this is how it arrives.",g_cre_t:"Caramelised and still warm. The best ending.",noot:"Also pancakes, salads, beef stew, fish dishes and a kids’ menu. Ask for today’s specials.",terras_titel:"A sea view, even in winter",terras_tekst:"On the terrace you sit right across from the beach. On chilly days the heaters are on.",f1:"Heated terrace",f1_t:"Sit outside all year round, facing the sea.",f2:"Indoor play corner",f2_t:"Colouring page and a lollipop for the kids.",f3:"Wheelchair accessible",f3_t:"Entrance, seating and toilet.",jaar:"years",verhaal_titel:"On the seafront since 2005",verhaal_tekst:"Twenty summers and twenty winters by the sea. Guests who came as kids for the pancakes now bring their own kids for the mussels. The interior is new, the service has stayed.",reviews_onder:"on Google, from 1,898 reviews",uren_titel:"Opening hours",groep:"Please call for groups of 6 or more.",route:"Directions",dagen:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],gesloten:"Closed",nu_open:"Open now · today until ",open_vanaf:"Opens today at ",nu_dicht:"Closed now · ",morgen:"tomorrow",vanaf:" opens at "},
+ de:{nav_kaart:"Speisekarte",nav_terras:"Terrasse",nav_verhaal:"Unsere Geschichte",nav_uren:"Öffnungszeiten",bel_kort:"Reservieren",sinds:"Brasserie am Deich von Blankenberge, seit 2005",held_titel:"Muscheln mit Meerblick.",held_sub:"Beheizte Terrasse, eine Spielecke für die Kinder und eine Karte von Vol-au-vent bis gegrilltem Hummer.",bel:"Anrufen und reservieren",naar_kaart:"Zur Speisekarte",label_titel:"Muscheln",label_tekst:"Natur, Knoblauch oder Weißwein",kaart_titel:"Die Karte",kaart_intro:"Klassiker der Küste, jeden Tag frisch. Große Portionen, faire Preise und zu allem hausgemachte Pommes.",tab_zee:"Aus dem Meer",tab_brasserie:"Brasserie",tab_dessert:"Dessert",g_mos:"Muscheln",g_mos_t:"Natur, mit Knoblauch oder in Weißwein. Mit Pommes, wie es sich gehört.",g_kro:"Krabbenkroketten",g_kro_t:"Knusprig gebacken, mit frischem Salat und Zitrone.",g_kre:"Gegrillter Hummer",g_kre_t:"Mit Gemüsebutter und kleinen Kartoffeln. Für die Tage, an denen gefeiert wird.",g_vol_t:"Hausgemacht, mit Huhn, Champignons und Fleischbällchen in cremiger Soße.",g_ste:"Steak mit Pommes",g_ste_t:"Gegrillt nach Wunsch, mit Béarnaise oder Pfeffersoße.",g_men:"Der volle Teller",g_men_t:"Steak, Pommes, frischer Salat und Soße: so kommt es auf den Tisch.",g_cre_t:"Karamellisiert und noch lauwarm. Der beste Abschluss.",noot:"Auch Pfannkuchen, Salate, Rindsgulasch, Fischgerichte und ein Kindermenü. Fragen Sie nach den Tagesempfehlungen.",terras_titel:"Meerblick, auch im Winter",terras_tekst:"Auf der Terrasse sitzen Sie direkt gegenüber dem Strand. An kühlen Tagen laufen die Heizstrahler.",f1:"Beheizte Terrasse",f1_t:"Das ganze Jahr draußen sitzen, mit Blick aufs Meer.",f2:"Spielecke drinnen",f2_t:"Malblatt und Lutscher für die Kinder.",f3:"Rollstuhlgerecht",f3_t:"Eingang, Sitzplätze und Toilette.",jaar:"Jahre",verhaal_titel:"Seit 2005 am Deich",verhaal_tekst:"Zwanzig Sommer und zwanzig Winter am Meer. Wer als Kind für die Pfannkuchen kam, kommt heute mit den eigenen Kindern für die Muscheln. Das Interieur ist neu, der Service ist geblieben.",reviews_onder:"auf Google, aus 1.898 Bewertungen",uren_titel:"Öffnungszeiten",groep:"Für Gruppen ab 6 Personen bitte kurz anrufen.",route:"Route",dagen:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],gesloten:"Geschlossen",nu_open:"Jetzt geöffnet · heute bis ",open_vanaf:"Heute geöffnet ab ",nu_dicht:"Jetzt geschlossen · ",morgen:"morgen",vanaf:" geöffnet ab "}
+};
+var UREN = {1:["10:30","22:00"],2:["10:30","22:00"],3:["10:30","22:00"],4:["10:30","22:00"],5:["10:30","22:00"],6:null,0:null}; // van de Google-vermelding; de uitbater past dit aan
+var taal = "nl";
+try { taal = localStorage.getItem("mm_taal") || ""; } catch(e) { taal = ""; }
+if (!T[taal]) { var n = (navigator.language || "nl").slice(0,2); taal = T[n] ? n : "nl"; }
+function min(s){ var p = s.split(":"); return +p[0]*60 + +p[1]; }
+function zet(l){
+  taal = l; var t = T[l]; document.documentElement.lang = l;
+  document.querySelectorAll("[data-t]").forEach(function(el){ var k = el.getAttribute("data-t"); if (t[k]) el.textContent = t[k]; });
+  document.querySelectorAll(".talen button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+  var html = ""; var nu = new Date(), d = nu.getDay(), tm = nu.getHours()*60 + nu.getMinutes();
+  [1,2,3,4,5,6,0].forEach(function(i){ var u = UREN[i]; var dag = t.dagen[i]; dag = dag.charAt(0).toUpperCase() + dag.slice(1);
+    html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dag + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : t.gesloten) + "</td></tr>"; });
+  document.getElementById("uren").innerHTML = html;
+  var st = document.getElementById("status"), sp = st.querySelector("span"), u = UREN[d];
+  st.classList.remove("dicht");
+  if (u && tm >= min(u[0]) && tm < min(u[1])) sp.textContent = t.nu_open + u[1];
+  else { st.classList.add("dicht"); var v = (d+1)%7, k = 1; while (!UREN[v] && k < 7) { v = (v+1)%7; k++; }
+    sp.textContent = (u && tm < min(u[0])) ? t.open_vanaf + u[0] : t.nu_dicht + (k===1 ? t.morgen : t.dagen[v]) + t.vanaf + UREN[v][0]; }
+  var gerechten = [t.g_mos, "Vol-au-vent", t.g_kro, t.g_kre, t.g_ste, "Crème brûlée"];
+  var schelp = '<svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 7 3 12c0 3 2 6 9 9 7-3 9-6 9-9 0-5-4-9-9-9zm0 3v13M8 5l2 14M16 5l-2 14"/></svg>';
+  var rij = gerechten.map(function(g){ return "<span>" + g + schelp + "</span>"; }).join("");
+  document.getElementById("band").innerHTML = rij + rij;
+  try { localStorage.setItem("mm_taal", l); } catch(e) {}
 }
-// beweging: onthullen bij scrollen, parallax op de hero, cijfer dat optelt, plakkende balk
+document.querySelectorAll(".talen button").forEach(function(b){ b.addEventListener("click", function(){ zet(b.dataset.lang); }); });
+zet(taal);
+
+// tabs
+document.querySelectorAll(".tabs button").forEach(function(b){
+  b.addEventListener("click", function(){
+    document.querySelectorAll(".tabs button").forEach(function(x){ x.setAttribute("aria-selected", x===b ? "true" : "false"); });
+    document.querySelectorAll(".groep").forEach(function(g){ g.classList.remove("aan"); });
+    var g = document.getElementById("g-" + b.dataset.groep); void g.offsetWidth; g.classList.add("aan");
+  });
+});
+
+// beweging
 var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.18});
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.15});
 document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
-document.querySelectorAll(".gerecht").forEach(function(el,i){ el.style.transitionDelay = (i%3)*90+"ms"; io.observe(el); });
-var heroImg = document.querySelector(".hero .achtergrond"), plak = document.getElementById("plakkend"), heroH = document.querySelector(".hero").offsetHeight;
-document.getElementById("plakstatus").textContent = sp.textContent;
-function opScroll(){ var y = window.scrollY; if(!rm && y < heroH){ heroImg.style.transform = "scale(1) translateY(" + (y*0.28) + "px)"; } plak.classList.toggle("aan", y > heroH - 60); }
-window.addEventListener("scroll", opScroll, {passive:true}); opScroll();
-var cijfer = document.getElementById("cijfer"), sterren = document.getElementById("sterren").children, geteld = false;
-new IntersectionObserver(function(es){ if(es[0].isIntersecting && !geteld){ geteld = true; var t0 = performance.now();
-  (function tik(now){ var k = Math.min(1,(now-t0)/1400), e = 1-Math.pow(1-k,3); cijfer.textContent = (e*4.2).toFixed(1).replace(".",","); for(var i=0;i<4;i++){ sterren[i].classList.toggle("aan", e*4.2 >= i+0.9); } if(k<1) requestAnimationFrame(tik); })(t0);
-} }, {threshold:.6}).observe(cijfer);
-if(rm){ heroImg.pause && heroImg.pause(); heroImg.removeAttribute("autoplay"); }
-if(rm){ cijfer.textContent = "4,2"; for(var i=0;i<4;i++) sterren[i].classList.add("aan"); }
+var kop = document.getElementById("kop"), pot = document.getElementById("pot"), achter = document.querySelector(".achter");
+function scroll(){ var y = window.scrollY; kop.classList.toggle("vast", y > 30);
+  if (!rm && y < window.innerHeight * 1.2) { pot.style.transform = "translateY(" + (y*0.18) + "px) rotate(" + (y*0.03) + "deg)"; achter.style.marginLeft = (-y*0.25) + "px"; } }
+window.addEventListener("scroll", scroll, {passive:true}); scroll();
+var jaren = document.getElementById("jaren"), geteld = false;
+new IntersectionObserver(function(es){ if (es[0].isIntersecting && !geteld && !rm) { geteld = true; var t0 = performance.now();
+  (function tik(nu){ var k = Math.min(1, (nu-t0)/1400), e = 1 - Math.pow(1-k, 3); jaren.textContent = Math.round(e*20); if (k < 1) requestAnimationFrame(tik); })(t0); } }, {threshold:.5}).observe(jaren);
+if (rm) { document.querySelectorAll("video").forEach(function(v){ v.pause(); v.removeAttribute("autoplay"); }); }
 </script>
 </body>
 </html>
