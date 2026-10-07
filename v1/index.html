@@ -209,5 +209,73 @@ new IntersectionObserver(function(es){ if(es[0].isIntersecting && !geteld){ gete
 if(rm){ heroImg.pause && heroImg.pause(); heroImg.removeAttribute("autoplay"); }
 if(rm){ cijfer.textContent = "4,2"; for(var i=0;i<4;i++) sterren[i].classList.add("aan"); }
 </script>
+<style>
+.talen{display:flex;gap:2px;font-size:13px;font-weight:600}
+.talen button{background:none;border:0;padding:5px 7px;border-radius:6px;cursor:pointer;color:rgba(255,255,255,.75);font:inherit}
+.talen button[aria-pressed="true"]{color:#15191c;background:#fff}
+@media(max-width:720px){.nav ul{display:flex!important;gap:0}.nav ul li:not(.taal-li){display:none}}
+</style>
+<script>
+(function(){
+var M = {
+"De kaart":["La carte","Menu","Die Karte"],
+"Terras":["Terrasse","Terrace","Terrasse"],
+"Openingsuren":["Horaires","Opening hours","Öffnungszeiten"],
+"Brasserie op de Zeedijk van Blankenberge. Verwarmd terras met zicht op zee, een speeltuin voor de kinderen en een kaart van mosselen tot kreeft.":["Brasserie sur la digue de Blankenberge. Terrasse chauffée avec vue sur la mer, un coin de jeux pour les enfants et une carte des moules au homard.","Brasserie on the seafront of Blankenberge. A heated terrace with a sea view, a play corner for the kids and a menu from mussels to lobster.","Brasserie am Deich von Blankenberge. Beheizte Terrasse mit Meerblick, eine Spielecke für die Kinder und eine Karte von Muscheln bis Hummer."],
+"Bel om te reserveren":["Appeler pour réserver","Call to book","Anrufen und reservieren"],
+"Route naar Zeedijk 157":["Itinéraire vers Zeedijk 157","Directions to Zeedijk 157","Route zum Zeedijk 157"],
+"Klassiekers van de kust, elke dag vers. Grote porties, eerlijke prijzen, en bij alles frietjes van het huis.":["Les classiques de la côte, frais chaque jour. Belles portions, prix honnêtes, et des frites maison avec tout.","Coastal classics, fresh every day. Big portions, fair prices, and house fries with everything.","Klassiker der Küste, jeden Tag frisch. Große Portionen, faire Preise und zu allem hausgemachte Pommes."],
+"Mosselen":["Moules","Mussels","Muscheln"],
+"Natuur, met look of in witte wijn. Met frietjes, zoals het hoort.":["Nature, à l’ail ou au vin blanc. Avec des frites, comme il se doit.","Plain, with garlic or in white wine. With fries, the way it should be.","Natur, mit Knoblauch oder in Weißwein. Mit Pommes, wie es sich gehört."],
+"Huisbereid, romig en royaal. De favoriet van onze vaste gasten.":["Fait maison, crémeux et généreux. Le préféré de nos habitués.","Homemade, creamy and generous. Our regulars’ favourite.","Hausgemacht, cremig und großzügig. Der Liebling unserer Stammgäste."],
+"Garnaalkroketten":["Croquettes de crevettes","Shrimp croquettes","Krabbenkroketten"],
+"Krokant gebakken, met gefrituurde peterselie en citroen.":["Bien croustillantes, avec persil frit et citron.","Fried crisp, with fried parsley and lemon.","Knusprig gebacken, mit frittierter Petersilie und Zitrone."],
+"Steak-friet":["Steak-frites","Steak & fries","Steak mit Pommes"],
+"Gegrild zoals u het wil, met béarnaise of pepersaus en verse salade.":["Grillé à votre goût, sauce béarnaise ou au poivre et salade fraîche.","Grilled the way you like it, with béarnaise or pepper sauce and fresh salad.","Gegrillt nach Wunsch, mit Béarnaise oder Pfeffersoße und frischem Salat."],
+"Gegrilde kreeft":["Homard grillé","Grilled lobster","Gegrillter Hummer"],
+"Met groenteboter en krieltjes. Voor de dagen dat het feest mag zijn.":["Au beurre de légumes et pommes grenaille. Pour les jours de fête.","With vegetable butter and baby potatoes. For the days worth celebrating.","Mit Gemüsebutter und kleinen Kartoffeln. Für die Tage, an denen gefeiert wird."],
+"Om te eindigen: gekaramelliseerd, nog lauw.":["Pour finir : caramélisée, encore tiède.","To finish: caramelised, still warm.","Zum Schluss: karamellisiert, noch lauwarm."],
+"Ook pannenkoeken, salades, stoofvlees, visschotels en een kindermenu.":["Aussi des crêpes, salades, carbonnade, plats de poisson et un menu enfant.","Also pancakes, salads, beef stew, fish dishes and a kids’ menu.","Auch Pfannkuchen, Salate, Rindsgulasch, Fischgerichte und ein Kindermenü."],
+"Vraag naar de suggesties van de dag.":["Demandez les suggestions du jour.","Ask for today’s specials.","Fragen Sie nach den Tagesempfehlungen."],
+"Zicht op zee, ook in de winter":["Vue sur la mer, même en hiver","A sea view, even in winter","Meerblick, auch im Winter"],
+"Op het terras zit u recht tegenover het strand. Bij frisse dagen staan de verwarmers aan; binnen wacht het vernieuwde interieur met de bar.":["Sur la terrasse, vous êtes juste en face de la plage. Les jours frais, les chauffages sont allumés ; à l’intérieur vous attend la salle rénovée avec le bar.","On the terrace you sit right across from the beach. On chilly days the heaters are on; inside, the renovated room and the bar are waiting.","Auf der Terrasse sitzen Sie direkt gegenüber dem Strand. An kühlen Tagen laufen die Heizstrahler; drinnen warten der renovierte Raum und die Bar."],
+"Verwarmd terras":["Terrasse chauffée","Heated terrace","Beheizte Terrasse"],
+"Het hele jaar buiten zitten, met zicht op zee.":["Dehors toute l’année, avec vue sur la mer.","Sit outside all year round, facing the sea.","Das ganze Jahr draußen sitzen, mit Blick aufs Meer."],
+"Binnenspeeltuin voor de kinderen":["Coin de jeux intérieur pour les enfants","Indoor play corner for the kids","Spielecke drinnen für die Kinder"],
+"Kleurplaat en lolly inbegrepen.":["Coloriage et sucette compris.","Colouring page and lollipop included.","Malblatt und Lutscher inklusive."],
+"Rolstoeltoegankelijk":["Accessible en fauteuil","Wheelchair accessible","Rollstuhlgerecht"],
+"Ingang, zitplaatsen en toilet.":["Entrée, places et toilettes.","Entrance, seating and toilet.","Eingang, Sitzplätze und Toilette."],
+"op Google, bij 1.898 beoordelingen":["sur Google, 1 898 avis","on Google, from 1,898 reviews","auf Google, aus 1.898 Bewertungen"],
+"Geen reservatie nodig voor kleine groepen. Bel even voor 6 personen of meer.":["Pas besoin de réserver pour les petits groupes. Appelez pour 6 personnes ou plus.","No booking needed for small groups. Please call for 6 or more.","Für kleine Gruppen keine Reservierung nötig. Ab 6 Personen bitte kurz anrufen."],
+"Route":["Itinéraire","Directions","Route"]
+};
+var D = {nl:["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],fr:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],de:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"]};
+var S = {nl:["Gesloten","Nu open · vandaag tot ","Vandaag open vanaf ","Nu gesloten · ","morgen"," open vanaf "],fr:["Fermé","Ouvert · aujourd’hui jusqu’à ","Ouvert aujourd’hui dès ","Fermé · ","demain"," ouvert dès "],en:["Closed","Open now · today until ","Opens today at ","Closed now · ","tomorrow"," opens at "],de:["Geschlossen","Jetzt geöffnet · heute bis ","Heute geöffnet ab ","Jetzt geschlossen · ","morgen"," geöffnet ab "]};
+var IDX = {fr:0,en:1,de:2};
+var nodes = [];
+(function walk(n){ for (var c = n.firstChild; c; c = c.nextSibling) { if (c.nodeType === 3) { var t = c.nodeValue.trim(); if (t && M[t]) nodes.push([c, t, c.nodeValue]); } else if (c.nodeType === 1 && !/SCRIPT|STYLE/.test(c.tagName)) walk(c); } })(document.body);
+function zet(l){
+  document.documentElement.lang = l;
+  nodes.forEach(function(x){ x[0].nodeValue = l === "nl" ? x[2] : x[2].replace(x[1], M[x[1]][IDX[l]]); });
+  var dag = D[l], s = S[l], nu = new Date(), d = nu.getDay(), t = nu.getHours()*60 + nu.getMinutes(), html = "";
+  [1,2,3,4,5,6,0].forEach(function(i){ var u = uren[i]; html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dag[i].charAt(0).toUpperCase() + dag[i].slice(1) + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : s[0]) + "</td></tr>"; });
+  document.getElementById("uren").innerHTML = html;
+  var st = document.getElementById("status"), sp = st.querySelector("span"), u = uren[d]; st.classList.remove("dicht");
+  if (u && t >= min(u[0]) && t < min(u[1])) sp.textContent = s[1] + u[1];
+  else { st.classList.add("dicht"); var v = (d+1)%7, k = 1; while (!uren[v] && k < 7) { v = (v+1)%7; k++; } sp.textContent = (u && t < min(u[0])) ? s[2] + u[0] : s[3] + (k===1 ? s[4] : dag[v]) + s[5] + uren[v][0]; }
+  document.getElementById("plakstatus").textContent = sp.textContent;
+  document.querySelectorAll(".talen button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+  try { localStorage.setItem("mm_taal", l); } catch(e) {}
+}
+var li = document.createElement("li"); li.className = "taal-li";
+li.innerHTML = '<div class="talen" role="group" aria-label="Taal"><button data-lang="nl">NL</button><button data-lang="fr">FR</button><button data-lang="en">EN</button><button data-lang="de">DE</button></div>';
+document.querySelector(".nav ul").appendChild(li);
+document.querySelectorAll(".talen button").forEach(function(b){ b.addEventListener("click", function(){ zet(b.dataset.lang); }); });
+var l = ""; try { l = localStorage.getItem("mm_taal") || ""; } catch(e) {}
+if (!D[l]) { var n2 = (navigator.language || "nl").slice(0,2); l = D[n2] ? n2 : "nl"; }
+zet(l);
+})();
+</script>
+
 </body>
 </html>
