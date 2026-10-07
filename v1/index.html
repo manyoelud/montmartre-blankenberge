@@ -165,7 +165,7 @@ body{padding-bottom:84px}.hero{min-height:min(88vh,760px)}}
     <div>
       <h2 class="reveal">Openingsuren</h2>
       <table class="uren" id="uren"></table>
-      <p class="adres">Zeedijk 157, 8370 Blankenberge<br><a href="tel:+3250413892">050 41 38 92</a><br>Geen reservatie nodig voor kleine groepen. Bel even voor 6 personen of meer.</p>
+      <p class="adres">Zeedijk 157, 8370 Blankenberge<br><a href="tel:+3250413892">050 41 38 92</a><br>Reserveren is niet nodig tot 8 personen.</p>
     </div>
     <div class="kaartbox"><iframe title="Montmartre op de kaart" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ17ZUZ2OqxEcRtraHGsbg_ds&amp;output=embed&amp;hl=nl"></iframe></div>
   </div>
@@ -176,7 +176,7 @@ body{padding-bottom:84px}.hero{min-height:min(88vh,760px)}}
 
 <script>
 // openingsuren per dag (0 = zondag), van de Google-vermelding; de uitbater past dit aan
-var uren = {1:["10:30","22:00"],2:["10:30","22:00"],3:["10:30","22:00"],4:["10:30","22:00"],5:["10:30","22:00"],6:null,0:null};
+var uren = {1:["10:00","21:00"],2:["10:00","21:00"],3:["10:00","21:00"],4:["10:00","21:00"],5:["10:00","21:00"],6:null,0:null};
 var dagen = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
 var nu = new Date(), d = nu.getDay(), t = nu.getHours()*60 + nu.getMinutes();
 function min(s){ var p = s.split(":"); return Number(p[0])*60 + Number(p[1]); }
@@ -246,7 +246,7 @@ var M = {
 "Rolstoeltoegankelijk":["Accessible en fauteuil","Wheelchair accessible","Rollstuhlgerecht"],
 "Ingang, zitplaatsen en toilet.":["Entrée, places et toilettes.","Entrance, seating and toilet.","Eingang, Sitzplätze und Toilette."],
 "op Google, bij 1.898 beoordelingen":["sur Google, 1 898 avis","on Google, from 1,898 reviews","auf Google, aus 1.898 Bewertungen"],
-"Geen reservatie nodig voor kleine groepen. Bel even voor 6 personen of meer.":["Pas besoin de réserver pour les petits groupes. Appelez pour 6 personnes ou plus.","No booking needed for small groups. Please call for 6 or more.","Für kleine Gruppen keine Reservierung nötig. Ab 6 Personen bitte kurz anrufen."],
+"Reserveren is niet nodig tot 8 personen.":["Pas besoin de réserver jusqu’à 8 personnes.","No booking needed for up to 8 people.","Bis 8 Personen ist keine Reservierung nötig."],
 "Route":["Itinéraire","Directions","Route"]
 };
 var D = {nl:["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],fr:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],de:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"]};
