@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Montmartre — Brasserie op de Zeedijk, Blankenberge</title>
+<meta name="description" content="Brasserie Montmartre op de Zeedijk in Blankenberge: verwarmd terras met zicht op zee, kinderspeeltuin, mosselen, vol-au-vent, garnaalkroketten en steak-friet. Zeedijk 157, 050 41 38 92.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--zee:#1b2a33;--schuim:#f3f5f4;--koper:#c8893b;--koper-d:#a86f2a;--zand:#d8cdb8;--inkt:#15191c;--grijs:#5c6a72;--lijn:#d9dedc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:hidden;max-width:100%}
+body{margin:0;background:var(--schuim);color:var(--inkt);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;margin:0;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+nav.nav{position:absolute;top:0;left:0;right:0;z-index:5;color:#fff}
+nav.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.nav .merk{font-family:Gloock,serif;font-size:24px;text-decoration:none}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.9}.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:720px){.nav ul{display:none}}
+.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--zee)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%;animation:zoom 14s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,51,.25) 0%,rgba(27,42,51,0) 35%,rgba(27,42,51,.78) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:0 0 56px}
+.hero h1{font-size:clamp(50px,10.5vw,136px);line-height:.9;margin-left:-.04em;animation:rise .9s cubic-bezier(.2,.7,.2,1) both .15s}
+.hero p.sub{font-size:clamp(19px,2.2vw,26px);margin:18px 0 0;max-width:34ch;animation:rise .9s cubic-bezier(.2,.7,.2,1) both .35s}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 16px 10px 12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:15px;animation:rise .9s both .5s}
+.status i{width:10px;height:10px;border-radius:50%;background:#7bd389;box-shadow:0 0 0 4px rgba(123,211,137,.25)}.status.dicht i{background:#e07a5f;box-shadow:0 0 0 4px rgba(224,122,95,.25)}
+.knoppen{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;animation:rise .9s both .6s}
+.knop{display:inline-block;padding:15px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;background:var(--koper);color:#fff;border:1px solid var(--koper)}
+.knop:hover{background:var(--koper-d);border-color:var(--koper-d)}
+.knop.licht{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}.knop.licht:hover{background:rgba(255,255,255,.12)}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.hero img,.hero h1,.hero p.sub,.status,.knoppen{animation:none}}
+section{padding:96px 0}
+.kop{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+.kop h2{font-size:clamp(38px,5vw,60px)}.kop p{margin:0;color:var(--grijs);font-size:18px;max-width:46ch}
+@media(max-width:820px){.kop{grid-template-columns:1fr;gap:14px}}
+.kaart{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+@media(max-width:900px){.kaart{grid-template-columns:1fr 1fr}}@media(max-width:560px){.kaart{grid-template-columns:1fr}}
+.gerecht img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;background:var(--zand)}
+.gerecht h3{font-size:26px;margin:16px 0 6px}.gerecht p{margin:0;color:var(--grijs);font-size:16px}
+.noot{margin:40px 0 0;padding-top:22px;border-top:1px solid var(--lijn);color:var(--grijs);font-size:16px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.terras{background:var(--zee);color:#fff}
+.terras .duo{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+@media(max-width:820px){.terras .duo{grid-template-columns:1fr}}
+.terras img{width:100%;border-radius:6px;display:block}
+.terras h2{font-size:clamp(38px,5vw,60px);margin-bottom:22px}
+.feiten{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.feiten li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;font-size:17px}
+.feiten li strong{display:block;font-weight:600}.feiten li span{color:rgba(255,255,255,.72)}
+.feiten svg{width:26px;height:26px;stroke:var(--koper);fill:none;stroke-width:1.6;margin-top:2px}
+.fotos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.fotos img{aspect-ratio:4/3;object-fit:cover}
+.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.score b{font-family:Gloock,serif;font-size:72px;font-weight:400;line-height:1}.score .sterren{color:var(--koper);font-size:26px;letter-spacing:2px}.score small{color:var(--grijs);font-size:16px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+@media(max-width:820px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;padding:28px;background:#fff;border:1px solid var(--lijn);border-radius:6px;font-size:17px}
+blockquote p{margin:0 0 16px}blockquote footer{color:var(--grijs);font-size:15px}
+.praktisch{background:#fff;border-top:1px solid var(--lijn)}
+.praktisch .duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:820px){.praktisch .duo{grid-template-columns:1fr}}
+.praktisch h2{font-size:clamp(38px,5vw,60px);margin-bottom:26px}
+.uren{width:100%;border-collapse:collapse;font-size:17px}
+.uren td{padding:11px 0;border-bottom:1px solid var(--lijn)}.uren td:last-child{text-align:right}.uren tr.nu td{font-weight:600}.uren td.dicht{color:var(--grijs)}
+.adres{margin:26px 0 0;font-size:18px;line-height:1.7}.adres a{text-decoration:none;border-bottom:1px solid var(--zand)}
+.kaartbox{border-radius:6px;overflow:hidden;border:1px solid var(--lijn);min-height:380px;background:var(--zand)}
+.kaartbox iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+footer.voet{padding:36px 0;color:var(--grijs);font-size:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.belbalk{display:none}
+@media(max-width:720px){.belbalk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:9}
+.belbalk .knop{text-align:center;padding:14px 10px;box-shadow:0 10px 30px rgba(21,25,28,.25)}.belbalk .knop.licht{background:#fff;color:var(--inkt);border-color:#fff}
+body{padding-bottom:84px}.hero{min-height:min(88vh,760px)}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <img src="img/hero.jpg" alt="Het terras van Montmartre op de Zeedijk bij valavond, met zicht op zee" fetchpriority="high">
+  <nav class="nav"><div class="wrap"><a class="merk" href="#top">Montmartre</a>
+    <ul><li><a href="#kaart">De kaart</a></li><li><a href="#terras">Terras</a></li><li><a href="#praktisch">Openingsuren</a></li><li><a href="tel:+3250413892">050 41 38 92</a></li></ul></div></nav>
+  <div class="wrap">
+    <h1>Montmartre</h1>
+    <p class="sub">Brasserie op de Zeedijk van Blankenberge. Verwarmd terras met zicht op zee, een speeltuin voor de kinderen en een kaart van mosselen tot kreeft.</p>
+    <div class="status" id="status"><i></i><span>Openingsuren laden…</span></div>
+    <div class="knoppen"><a class="knop" href="tel:+3250413892">Bel om te reserveren</a><a class="knop licht" href="https://www.google.com/maps/search/?api=1&amp;query=Montmartre&amp;query_place_id=ChIJ17ZUZ2OqxEcRtraHGsbg_ds">Route naar Zeedijk 157</a></div>
+  </div>
+</header>
+
+<section id="kaart">
+  <div class="wrap">
+    <div class="kop"><h2>De kaart</h2><p>Klassiekers van de kust, elke dag vers. Grote porties, eerlijke prijzen, en bij alles frietjes van het huis.</p></div>
+    <div class="kaart">
+      <article class="gerecht"><img src="img/mosselen.jpg" alt="Pot mosselen natuur"><h3>Mosselen</h3><p>Natuur, met look of in witte wijn. Met frietjes, zoals het hoort.</p></article>
+      <article class="gerecht"><img src="img/volauvent.jpg" alt="Vol-au-vent in romige saus"><h3>Vol-au-vent</h3><p>Huisbereid, romig en royaal. De favoriet van onze vaste gasten.</p></article>
+      <article class="gerecht"><img src="img/kroketten.jpg" alt="Garnaalkroketten met salade en citroen"><h3>Garnaalkroketten</h3><p>Krokant gebakken, met gefrituurde peterselie en citroen.</p></article>
+      <article class="gerecht"><img src="img/steak.jpg" alt="Steak met frietjes en béarnaise"><h3>Steak-friet</h3><p>Gegrild zoals u het wil, met béarnaise of pepersaus en verse salade.</p></article>
+      <article class="gerecht"><img src="img/kreeft.jpg" alt="Gegrilde kreeft met krieltjes"><h3>Gegrilde kreeft</h3><p>Met groenteboter en krieltjes. Voor de dagen dat het feest mag zijn.</p></article>
+      <article class="gerecht"><img src="img/cremebrulee.jpg" alt="Crème brûlée"><h3>Crème brûlée</h3><p>Om te eindigen: gekaramelliseerd, nog lauw.</p></article>
+    </div>
+    <p class="noot"><span>Ook pannenkoeken, salades, stoofvlees, visschotels en een kindermenu.</span><span>Vraag naar de suggesties van de dag.</span></p>
+  </div>
+</section>
+
+<section class="terras" id="terras">
+  <div class="wrap duo">
+    <div><img src="img/speeltuin.jpg" alt="De speeltuin op het strand voor het terras">
+      <div class="fotos"><img src="img/interieur.jpg" alt="Het vernieuwde interieur met de bar"><img src="img/gevel.jpg" alt="De gevel van Montmartre op de Zeedijk"></div></div>
+    <div>
+      <h2>Zicht op zee, ook in de winter</h2>
+      <p>Op het terras zit u recht tegenover het strand. Bij frisse dagen staan de verwarmers aan; binnen wacht het vernieuwde interieur met de bar.</p>
+      <ul class="feiten">
+        <li><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/></svg><div><strong>Verwarmd terras</strong><span>Het hele jaar buiten zitten, met zicht op zee.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21v-4a7 7 0 0 1 14 0v4"/></svg><div><strong>Speeltuin voor de kinderen</strong><span>Binnen én op het strand. Kleurplaat en lolly inbegrepen.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><circle cx="9" cy="17" r="3"/><path d="M9 14V7h5l3 5h3M6 7h3"/></svg><div><strong>Rolstoeltoegankelijk</strong><span>Ingang, zitplaatsen en toilet.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="score"><b>4,2</b><span class="sterren">★★★★☆</span><small>op Google, bij 1.898 beoordelingen</small></div>
+    <div class="quotes">
+      <blockquote><p>“De kaart is heel gevarieerd met voor elk wat wils. Het onthaal was heel vriendelijk en spontaan. Vol-au-vent met frietjes, een Poes erbij: snel bediend en de porties zijn groot. Zeker een aanrader.”</p><footer>Arnout, via Google</footer></blockquote>
+      <blockquote><p>“Een mooie binnenspeeltuin voor jonge kindjes, gratis lolly bij het drinken, de wachttijd is super snel. Eten is lekker en een zeer mooie prijs voor wat u krijgt. Wij komen volgende keer nog eens terug.”</p><footer>Tom, via Google</footer></blockquote>
+      <blockquote><p>“Aanrader: vriendelijke bediening en eerlijke prijzen. Beste plek in Blankenberge om te eten.”</p><footer>Luc, via Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="praktisch" id="praktisch">
+  <div class="wrap duo">
+    <div>
+      <h2>Openingsuren</h2>
+      <table class="uren" id="uren"></table>
+      <p class="adres">Zeedijk 157, 8370 Blankenberge<br><a href="tel:+3250413892">050 41 38 92</a><br>Geen reservatie nodig voor kleine groepen. Bel even voor 6 personen of meer.</p>
+    </div>
+    <div class="kaartbox"><iframe title="Montmartre op de kaart" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ17ZUZ2OqxEcRtraHGsbg_ds&amp;output=embed&amp;hl=nl"></iframe></div>
+  </div>
+  <div class="wrap"><footer class="voet"><span>© Brasserie Montmartre, Blankenberge</span><span>Zeedijk 157 · 050 41 38 92</span></footer></div>
+</section>
+
+<div class="belbalk"><a class="knop" href="tel:+3250413892">Bel 050 41 38 92</a><a class="knop licht" href="https://www.google.com/maps/search/?api=1&amp;query=Montmartre&amp;query_place_id=ChIJ17ZUZ2OqxEcRtraHGsbg_ds">Route</a></div>
+
+<script>
+// openingsuren per dag (0 = zondag), van de Google-vermelding; de uitbater past dit aan
+var uren = {1:["10:30","22:00"],2:["10:30","22:00"],3:["10:30","22:00"],4:["10:30","22:00"],5:["10:30","22:00"],6:null,0:null};
+var dagen = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
+var nu = new Date(), d = nu.getDay(), t = nu.getHours()*60 + nu.getMinutes();
+function min(s){ var p = s.split(":"); return Number(p[0])*60 + Number(p[1]); }
+var html = "";
+[1,2,3,4,5,6,0].forEach(function(i){
+  var u = uren[i];
+  html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dagen[i].charAt(0).toUpperCase() + dagen[i].slice(1) + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : "Gesloten") + "</td></tr>";
+});
+document.getElementById("uren").innerHTML = html;
+var st = document.getElementById("status"), u = uren[d], sp = st.querySelector("span");
+if (u && t >= min(u[0]) && t < min(u[1])) { sp.textContent = "Nu open · vandaag tot " + u[1]; }
+else {
+  st.classList.add("dicht");
+  var v = (d+1)%7, n = 1; while (!uren[v] && n < 7) { v = (v+1)%7; n++; }
+  sp.textContent = (u && t < min(u[0])) ? "Vandaag open vanaf " + u[0] : "Nu gesloten · " + (n===1 ? "morgen" : dagen[v]) + " open vanaf " + uren[v][0];
+}
+</script>
+</body>
+</html>
